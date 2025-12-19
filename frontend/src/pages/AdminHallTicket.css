@@ -1,0 +1,111 @@
+/* =====================================
+   ADMIN – HALL TICKET GENERATION
+   ===================================== */
+
+.admin-hallticket-page {
+  min-height: 100vh;
+  background-color: #f4f7fb;
+  padding: 120px 0 80px;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+.admin-hallticket-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+.admin-hallticket-title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 600;
+  color: #1f3c88;
+  margin-bottom: 40px;
+}
+
+/* Form Card */
+.hallticket-form-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 36px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.06);
+}
+
+/* Form Layout */
+.hallticket-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.hallticket-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
+}
+
+/* Inputs */
+.hallticket-form input {
+  padding: 12px 14px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hallticket-form input:focus {
+  outline: none;
+  border-color: #1f3c88;
+  box-shadow: 0 0 0 2px rgba(31, 60, 136, 0.12);
+}
+
+/* Submit Button */
+.hallticket-form button {
+  align-self: flex-end;
+  margin-top: 10px;
+  background-color: #1f3c88;
+  color: #ffffff;
+  padding: 12px 26px;
+  border-radius: 8px;
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.hallticket-form button:hover {
+  background-color: #16306b;
+  transform: translateY(-1px);
+}
+
+.hallticket-form button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Messages */
+.form-error {
+  color: #dc2626;
+  font-size: 14px;
+}
+
+.form-success {
+  color: #16a34a;
+  font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .admin-hallticket-container {
+    padding: 0 20px;
+  }
+
+  .hallticket-form-card {
+    padding: 24px;
+  }
+}

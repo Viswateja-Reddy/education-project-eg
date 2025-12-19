@@ -1,0 +1,168 @@
+/* Student Club Events Page */
+
+.student-club-events {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem;
+  font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+  background: #f5f7fa;
+  min-height: 100vh;
+}
+
+.student-club-events h1 {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #1f3c88;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.student-club-events h1::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #3f51b5, #ff4081);
+  margin: 0.75rem auto 0;
+  border-radius: 2px;
+}
+
+/* Grid */
+.events-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.75rem;
+}
+
+/* Card */
+.event-card {
+  background: #ffffff;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  animation: fadeIn 0.5s ease forwards;
+  opacity: 0;
+}
+
+.event-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+}
+
+/* Header */
+.event-header {
+  background: #3f51b5;
+  color: white;
+  padding: 1.25rem;
+}
+
+.event-header h2 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.event-club {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.25rem 0.75rem;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 999px;
+  font-size: 0.8rem;
+}
+
+/* Body */
+.event-body {
+  padding: 1.5rem;
+}
+
+.event-description {
+  color: #4b5563;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+}
+
+/* Details */
+.event-details {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.event-detail {
+  display: flex;
+  align-items: center;
+  font-size: 0.9rem;
+  color: #374151;
+}
+
+.event-detail i {
+  margin-right: 0.6rem;
+  font-style: normal;
+}
+
+/* Empty / Error */
+.no-events {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: #6b7280;
+}
+
+.no-events span {
+  font-size: 3rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.no-events h3 {
+  font-size: 1.4rem;
+  color: #374151;
+}
+
+.error-message {
+  background: #fee2e2;
+  color: #b91c1c;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Loading */
+.loading-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.75rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .student-club-events h1 {
+    font-size: 1.8rem;
+  }
+
+  .events-container,
+  .loading-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.event-card:nth-child(1) { animation-delay: 0.1s; }
+.event-card:nth-child(2) { animation-delay: 0.2s; }
+.event-card:nth-child(3) { animation-delay: 0.3s; }
+.event-card:nth-child(4) { animation-delay: 0.4s; }
